@@ -6,7 +6,7 @@ A collection of reusable code snippets and utilities for cross-project developme
 
 ### Install from GitHub
 ```bash
-pip install git+https://github.com/yourusername/useful_utils.git
+pip install git+https://github.com/ThaiHungN/useful_utils.git
 ```
 
 ### Or install locally
