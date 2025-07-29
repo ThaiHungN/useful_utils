@@ -13,6 +13,12 @@ Practical examples and patterns showing how to use the utilities in real-world s
 ### [Installation Guide](installation.md)
 Setup instructions, dependencies, configuration, and troubleshooting.
 
+### [Public Usage Guide](public_usage.md)
+Quick start guide for public users and contributors.
+
+### [Contributing Guide](../CONTRIBUTING.md)
+Detailed instructions for adding new functions to the library.
+
 ## Quick Navigation
 
 - **Getting Started**: [Installation Guide](installation.md)

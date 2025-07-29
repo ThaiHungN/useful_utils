@@ -6,27 +6,49 @@ Setup and configuration instructions for the Useful Utils library.
 
 - Python 3.7 or higher
 - pip (Python package installer)
+- Internet connection (for GitHub installation)
 
 ## Installation
 
-### 1. Clone the Repository
+### Method 1: Install from GitHub (Recommended)
 
 ```bash
-git clone <repository-url>
-cd useful_utils
+# Install directly from GitHub
+pip install git+https://github.com/yourusername/useful_utils.git
+
+# Or install a specific branch
+pip install git+https://github.com/yourusername/useful_utils.git@main
 ```
 
-### 2. Install Dependencies
+### Method 2: Clone and Install Locally
 
 ```bash
-# Install all required packages
+# Clone the repository
+git clone https://github.com/yourusername/useful_utils.git
+cd useful_utils
+
+# Install in development mode
+pip install -e .
+```
+
+### Method 3: Manual Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd useful_utils
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 3. Verify Installation
+### 4. Verify Installation
 
 ```bash
-# Test the logging utility
+# Test the package
+python -c "from utils import help; print(help('list'))"
+
+# Or run examples
 python examples/logging_example.py
 ```
 
