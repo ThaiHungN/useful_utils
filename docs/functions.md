@@ -16,7 +16,7 @@ Interactive help system for useful_utils functions.
 
 **Examples:**
 ```python
-from utils import help
+from useful_utils import help
 
 # Show help usage
 help()
@@ -39,7 +39,7 @@ Return a list of all available function names.
 
 **Example:**
 ```python
-from utils import list_functions
+from useful_utils import list_functions
 
 functions = list_functions()
 print(functions)  # ['set_debug']
@@ -69,7 +69,7 @@ Configure loguru logger with debug or info level.
 
 **Example:**
 ```python
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 # Enable debug mode (shows all log levels)

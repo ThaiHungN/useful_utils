@@ -132,7 +132,6 @@ from utils import safe_read_file
 content = safe_read_file('config.txt')
 if content:
     print("File read successfully")
-```
 
 **Features:**
 - Error handling for common file issues
@@ -147,7 +146,7 @@ if content:
 ### Safe File Reading
 
 ```python
-from utils import safe_read_file
+from useful_utils import safe_read_file
 
 # Read a file safely
 content = safe_read_file('config.json')
@@ -172,7 +171,7 @@ import os
 # Add the parent directory to the path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils import safe_read_file, help
+from useful_utils import safe_read_file, help
 
 
 def main():
@@ -274,13 +273,13 @@ def chunk_list(lst: list, size: int) -> List[List]:
 
 ```bash
 # Test the help system
-python -c "from utils import help; print(help('list'))"
+python -c "from useful_utils import help; print(help('list'))"
 
 # Run your example
 python examples/file_example.py
 
 # Test import
-python -c "from utils import your_function; print('Import successful')"
+python -c "from useful_utils import your_function; print('Import successful')"
 ```
 
 ## Pull Request Process

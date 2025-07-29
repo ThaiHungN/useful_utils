@@ -8,7 +8,7 @@ import os
 # Add the parent directory to the path so we can import from utils
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 

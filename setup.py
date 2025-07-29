@@ -14,7 +14,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/useful_utils",
-    packages=find_packages(),
+    packages=find_packages(include=['useful_utils*']),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",

@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "useful-utils"
+name = "useful_utils"
 version = "1.0.0"
 description = "A collection of reusable code snippets and utilities for cross-project development"
 readme = "README.md"
@@ -35,7 +35,7 @@ dev = [
 ]
 
 [project.scripts]
-useful-utils = "utils.cli:main"
+useful-utils = "useful_utils.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/yourusername/useful_utils"

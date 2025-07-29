@@ -4,21 +4,17 @@ A collection of reusable code snippets and utilities for cross-project developme
 
 ## Quick Start
 
-### Install from GitHub
+### Clone and Use
 ```bash
-pip install git+https://github.com/ThaiHungN/useful_utils.git
+git clone https://github.com/ThaiHungN/useful_utils.git
+cd useful_utils
+pip install -r requirements.txt
 ```
 
-### Or install locally
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Import utilities:**
-   ```python
-   from utils import set_debug, help
-   ```
+### Import and Use
+```python
+from useful_utils import set_debug, help
+```
 
 3. **Get help:**
    ```python
@@ -27,12 +23,19 @@ pip install git+https://github.com/ThaiHungN/useful_utils.git
    help('search', 'logging')       # Search functions
    ```
 
+### Alternative: Add to Python Path
+```python
+import sys
+sys.path.append('/path/to/useful_utils')
+from useful_utils import help, set_debug
+```
+
 ## Built-in Help System
 
 The library includes an interactive help system for quick function lookup:
 
 ```python
-from utils import help
+from useful_utils import help
 
 help()                    # Show help usage
 help('list')             # List all available functions
@@ -71,10 +74,12 @@ This library grows through community contributions. If you have a useful functio
 
 ```
 useful_utils/
-├── utils/          # Utility modules
+├── useful_utils/   # Main package (utility modules)
 ├── examples/       # Example scripts
 ├── docs/          # Documentation
-└── requirements.txt
+├── requirements.txt
+├── setup.py       # Package configuration
+└── pyproject.toml # Modern Python packaging
 ```
 
 ## Adding New Utilities

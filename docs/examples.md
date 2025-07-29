@@ -7,7 +7,7 @@ Practical examples and patterns for using the utilities.
 ### Basic Help Usage
 
 ```python
-from utils import help
+from useful_utils import help
 
 # Show help system usage
 print(help())
@@ -25,7 +25,7 @@ print(help('search', 'debug'))
 ### Interactive Development
 
 ```python
-from utils import help, set_debug
+from useful_utils import help, set_debug
 
 # Quick lookup during development
 print(help('list'))  # See what's available
@@ -40,7 +40,7 @@ set_debug(debug_mode=True)
 ### Programmatic Access
 
 ```python
-from utils import list_functions, get_function_info
+from useful_utils import list_functions, get_function_info
 
 # Get list of functions programmatically
 functions = list_functions()
@@ -59,7 +59,7 @@ if info:
 ### Basic Usage
 
 ```python
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 # Simple debug toggle
@@ -76,7 +76,7 @@ logger.info("This will show")
 
 ```python
 import os
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 # Automatically set debug mode based on environment
@@ -99,7 +99,7 @@ def process_data(data):
 
 ```python
 import argparse
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 def main():
@@ -126,7 +126,7 @@ def process_files():
 ### Error Handling with Logging
 
 ```python
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 set_debug(debug_mode=True)
@@ -154,7 +154,7 @@ safe_divide(10, 0)   # Error logged
 
 ```python
 import json
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 from loguru import logger
 
 def load_config(config_path):

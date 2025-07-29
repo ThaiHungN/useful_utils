@@ -9,7 +9,7 @@ __author__ = "Hung Nguyen"
 from .logging_utils import set_debug
 from .help_utils import help, list_functions, get_function_info
 
-# Make help function available at package level
+# Make functions available at package level
 __all__ = [
     'set_debug',
     'help',

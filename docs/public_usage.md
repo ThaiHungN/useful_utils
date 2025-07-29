@@ -5,15 +5,20 @@ This is a public utility library designed to be shared and used by everyone. Her
 ## Quick Installation
 
 ```bash
-# Install from GitHub
-pip install git+https://github.com/yourusername/useful_utils.git
+# Clone the repository
+git clone https://github.com/ThaiHungN/useful_utils.git
+cd useful_utils
+pip install -r requirements.txt
+
+# Or install in development mode (recommended for contributors)
+pip install -e .
 ```
 
 ## Basic Usage
 
 ```python
 # Import utilities
-from utils import help, set_debug
+from useful_utils import help, set_debug
 from loguru import logger
 
 # Explore what's available
@@ -31,7 +36,7 @@ logger.info("Hello from useful_utils!")
 
 ```python
 # In any Jupyter notebook
-from utils import help, set_debug
+from useful_utils import help, set_debug
 
 # Quick function discovery
 help('list')

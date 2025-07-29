@@ -10,46 +10,59 @@ Setup and configuration instructions for the Useful Utils library.
 
 ## Installation
 
-### Method 1: Install from GitHub (Recommended)
-
-```bash
-# Install directly from GitHub
-pip install git+https://github.com/yourusername/useful_utils.git
-
-# Or install a specific branch
-pip install git+https://github.com/yourusername/useful_utils.git@main
-```
-
-### Method 2: Clone and Install Locally
+### Method 1: Clone and Use (Recommended)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/useful_utils.git
-cd useful_utils
-
-# Install in development mode
-pip install -e .
-```
-
-### Method 3: Manual Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
+git clone https://github.com/ThaiHungN/useful_utils.git
 cd useful_utils
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
+### Method 2: Add to Python Path
+
+```python
+import sys
+sys.path.append('/path/to/useful_utils')
+from useful_utils import help, set_debug
+```
+
+### Method 3: Install in Development Mode
+
+```bash
+# Clone the repository
+git clone https://github.com/ThaiHungN/useful_utils.git
+cd useful_utils
+
+# Install in development mode
+pip install -e .
+```
+
 ### 4. Verify Installation
 
 ```bash
 # Test the package
-python -c "from utils import help; print(help('list'))"
+python -c "from useful_utils import help; print(help('list'))"
 
 # Or run examples
 python examples/logging_example.py
+```
+
+### 5. Use in Your Projects
+
+```python
+# In any Python script or Jupyter notebook
+from useful_utils import help, set_debug
+from loguru import logger
+
+# Explore available functions
+help('list')
+
+# Use the utilities
+set_debug(debug_mode=True)
+logger.info("Hello from useful_utils!")
 ```
 
 ## Virtual Environment (Recommended)
@@ -100,7 +113,7 @@ python your_script.py
 
 ```python
 import os
-from utils.logging_utils import set_debug
+from useful_utils import set_debug
 
 # Set debug mode from environment variable
 debug_mode = os.getenv('DEBUG', 'false').lower() == 'true'
