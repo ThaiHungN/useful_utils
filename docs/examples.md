@@ -54,6 +54,67 @@ if info:
     print(f"Description: {info['description']}")
 ```
 
+## Performance Examples
+
+### Basic Timing
+
+```python
+from useful_utils import log_time, timeit
+from loguru import logger
+
+# Using context manager
+with log_time("Data processing"):
+    # Your code here
+    process_data()
+    logger.info("Processing complete")
+
+# Using decorator
+@timeit("Training model")
+def train_model():
+    # Your function code here
+    pass
+```
+
+### Nested Timing
+
+```python
+from useful_utils import log_time
+
+with log_time("Main operation"):
+    with log_time("Step 1"):
+        # First step
+        pass
+    
+    with log_time("Step 2"):
+        # Second step
+        pass
+```
+
+### Performance Monitoring
+
+```python
+from useful_utils import timeit, set_debug
+from loguru import logger
+
+set_debug(debug_mode=True)
+
+@timeit("Database query")
+def query_database():
+    # Simulate database query
+    time.sleep(0.5)
+    return "data"
+
+@timeit("Data processing")
+def process_data(data):
+    # Simulate data processing
+    time.sleep(0.3)
+    return data.upper()
+
+# Use the functions
+data = query_database()
+result = process_data(data)
+```
+
 ## Logging Examples
 
 ### Basic Usage

@@ -30,6 +30,23 @@ class HelpSystem:
         except ImportError:
             pass
         
+        try:
+            from .timing_utils import log_time, timeit
+            functions['log_time'] = {
+                'module': 'timing_utils',
+                'function': log_time,
+                'description': 'Context manager for timing code blocks',
+                'category': 'Performance'
+            }
+            functions['timeit'] = {
+                'module': 'timing_utils',
+                'function': timeit,
+                'description': 'Decorator for timing functions',
+                'category': 'Performance'
+            }
+        except ImportError:
+            pass
+        
         return functions
     
     def list_functions(self) -> List[str]:

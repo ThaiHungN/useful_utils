@@ -100,4 +100,60 @@ logger.warning("This will be shown")
 
 ---
 
+## Performance Utilities (`useful_utils/timing_utils.py`)
+
+### `log_time(label="⏱️ Code block")`
+
+Context manager for timing a block of code and logging the time.
+
+**Parameters:**
+- `label` (str): Label to display in the log message (default: "⏱️ Code block")
+
+**Returns:** Context manager
+
+**Example:**
+```python
+from useful_utils import log_time
+from loguru import logger
+
+with log_time("Data processing"):
+    # Your code here
+    process_data()
+    logger.info("Processing complete")
+```
+
+### `timeit(label="⏱️ Function")`
+
+Decorator version of log_time for timing functions.
+
+**Parameters:**
+- `label` (str): Label to display in the log message (default: "⏱️ Function")
+
+**Returns:** Decorator function
+
+**Example:**
+```python
+from useful_utils import timeit
+
+@timeit("Training model")
+def train_model():
+    # Your function code here
+    pass
+```
+
+**Features:**
+- ⏱️ Visual timing indicators
+- Automatic logging with loguru
+- Context manager and decorator patterns
+- Nested timing support
+- Clean, readable output
+
+**Use Cases:**
+- Performance monitoring
+- Code profiling
+- Debugging slow operations
+- Production timing logs
+
+---
+
 *More utilities will be added here as the library grows.* 

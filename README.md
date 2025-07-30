@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 ### Import and Use
 ```python
-from useful_utils import set_debug, help
+from useful_utils import set_debug, log_time, timeit, help
 ```
 
 3. **Get help:**
@@ -27,7 +27,7 @@ from useful_utils import set_debug, help
 ```python
 import sys
 sys.path.append('/path/to/useful_utils')
-from useful_utils import help, set_debug
+from useful_utils import help, set_debug, log_time, timeit
 ```
 
 ## Built-in Help System
